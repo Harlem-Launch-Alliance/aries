@@ -8,3 +8,5 @@
 /ProjectAries/ProjectAries/Debug
 *.filters
 *.user
+*.db-shm
+*.db-wal
