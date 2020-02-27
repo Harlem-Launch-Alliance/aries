@@ -3,3 +3,8 @@
 ################################################################################
 
 *.opendb
+*.db
+*.suo
+/ProjectAries/ProjectAries/Debug
+*.filters
+*.user
