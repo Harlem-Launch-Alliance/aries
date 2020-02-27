@@ -10,3 +10,4 @@
 *.user
 *.db-shm
 *.db-wal
+*.json
