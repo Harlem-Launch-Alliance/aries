@@ -15,6 +15,7 @@ import serial
 import csv
 import numpy
 from drawnow import *
+
 # Creating empty arrays used for plotting data in MATLAB plots
 mission_time=[]
 pressurant_pressure=[]
@@ -51,7 +52,6 @@ def connect():
  buad = buad_rate.get()
  print(buad)
  try:
-47
  serial_object=serial.Serial('COM' + str(port), buad,timeout=0)
 
  except ValueError:
@@ -116,7 +116,6 @@ def get_data():
  1-Pressurant Tank
  2=Oxidizer Tank
  3=Combustion Tank
-48
  Mission_time,Temp1,Redundant Temp1,Pressure1, Redundant Pressure1,
  Temp2,Redundant Temp2,Pressure2, Redundant Pressure2,
  Temp3,Redundant Temp3,Pressure3, Redundant Pressure3, ValveInd1,ValveInd2,ValveInd3
@@ -240,7 +239,6 @@ DATALABEL16.place(x=815, y=380)
  DATALABEL18=Label(root, textvariable=v17, width=10)
 DATALABEL18.place(x=815, y=400)
  v17.set(filter_data[16])
-50
  #######################################
  ############# Convert data into numbers
 MissionTime=float(filter_data[0])
@@ -300,7 +298,6 @@ DATALABEL5.config(fg='black')
 pressurant_temp.pop(0)
 pressurant_pressure.pop(0)
  oxidizer_temp.pop(0)
-51
  oxidizer_pressure.pop(0)
 combustion_pressure.pop(0)
  mission_time.append(MissionTime)
@@ -364,7 +361,6 @@ def close_Oxidizer_fill():
  global serial_object
  serial_object.write(b'6')
  
-52
 def launch():
  global serial_object
  serial_object.write(b'7')
@@ -425,7 +421,6 @@ if __name__ == "__main__":
  Label_16.place(x=600, y=360)
  Label_17.place(x=600, y=380)
  Label_19.place(x=600, y=400)
-53
  #Data Labels
  Label_data1=Label(root, text ="X")
  Label_data2=Label(root, text ="X")
@@ -487,4 +482,3 @@ y=720)
  data_entry=Entry(width=7)
  data_entry.place(x=1200,y=500)
  buad_rate=Entry(width=7)
-54
