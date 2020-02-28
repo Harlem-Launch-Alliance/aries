@@ -12,3 +12,5 @@
 *.db-wal
 *.json
 /.vs
+/ProjectAries/.vs
+/ProjectAries/AriesGui/output.csv

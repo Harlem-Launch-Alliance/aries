@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AriesGui", "..\AriesGui\AriesGui.pyproj", "{E2552377-05DF-4330-A8BB-D6507E9015D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Release|x64.ActiveCfg = Release|Any CPU
+		{E2552377-05DF-4330-A8BB-D6507E9015D1}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1A5582F-C688-427C-97A9-0C1578DD98BF}
+	EndGlobalSection
+EndGlobal
