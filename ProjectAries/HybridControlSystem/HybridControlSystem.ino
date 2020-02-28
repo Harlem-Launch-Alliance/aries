@@ -308,6 +308,7 @@ void Launch()
 	// Heater ON (Solid Fuel Grain)
 	digitalWrite(ignitionPin, HIGH);
 	delay(5000); //wait to heat up wax
+
 	//Opening the Main isolation Valve
 	//Once liquid or vapor from oxidizer tank reaches the solid fuel grain ignition starts
 	digitalWrite(MIV_Pin, HIGH);
@@ -325,6 +326,7 @@ void Abort()
 	digitalWrite(ORTPRV_Pin, LOW);
 	digitalWrite(MIV_Pin, LOW);
 	digitalWrite(ignitionPin, LOW);
+
 	//Valve indicators initialize to zero meaning initially no signal
 	Pressurant_Fill_Indicator = 0;
 	Oxidizer_Fill_Indicator = 0;
