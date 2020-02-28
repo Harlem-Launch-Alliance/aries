@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF98839C-9AA7-49E6-8B1A-B0C261AFE6BD}"
+	ProjectSection(SolutionItems) = preProject
+		AriesGui\AriesGui.pyproj = AriesGui\AriesGui.pyproj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1A5582F-C688-427C-97A9-0C1578DD98BF}
+	EndGlobalSection
+EndGlobal
