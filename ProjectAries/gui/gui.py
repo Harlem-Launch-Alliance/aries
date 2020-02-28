@@ -29,12 +29,11 @@ x= 0 # Creating x as a global variable, used to control the infinte loop when di
 plt.ion() # Tells MATLAB to plot live stream
 
 # Create a File in excel with Headers that describe the telemetry
-RESULT = ['Mission_time','Temp1',
-          'Redundant Temp1','Pressure1', 'Redundant Pressure1',
-          'Temp2','Redundant Temp2','Pressure2', 
-          'Redundant Pressure2','Temp3','Redundant Temp3',
-          'Pressure3', 'Redundant Pressure3', 'Pressurant_Fill_Indicator',
-          'Pressurant_Oxidizer_Indicator','Oxidizer_Fill_Indicator','Oxidizer_Combustion_Indicator']
+RESULT = ['Mission_time','Temp1', 'Redundant Temp1','Pressure1', 
+          'Redundant Pressure1', 'Temp2','Redundant Temp2','Pressure2', 
+          'Redundant Pressure2','Temp3','Redundant Temp3', 'Pressure3', 
+          'Redundant Pressure3', 'Pressurant_Fill_Indicator', 'Pressurant_Oxidizer_Indicator',
+          'Oxidizer_Fill_Indicator','Oxidizer_Combustion_Indicator']
 
 with open("output.csv",'wb') as resultFile:
     wr = csv.writer(resultFile, dialect='excel')
@@ -56,9 +55,11 @@ def connect():
     print(buad)
     try:
         serial_object=serial.Serial('COM' + str(port), buad,timeout=0)
+
     except ValueError:
         print("Enter Baud and Port")
         return
+
     get_data()
 
 def makefig():
@@ -134,11 +135,10 @@ def get_data():
         while (serial_object.inWaiting()==0): #Wait here until there is data
             time.sleep(1)
             pass #do nothing
-        try:
-            serial_data=serial_object.readline().strip('\n').strip('\r')
-    
-            filter_data = serial_data.split(',')
 
+        try:
+            serial_data=serial_object.readline().strip('\n').strip('\r')    
+            filter_data = serial_data.split(',')
             print(filter_data)
 
             if (filter_data):
@@ -259,19 +259,14 @@ def get_data():
                 #######################################
                 ############# Convert data into numbers
                 MissionTime=float(filter_data[0])
-
                 PressurantTemp= float(filter_data[1])
-
                 PressurantPressure = float(filter_data[3])
-
                 OxidizerTemp= float(filter_data[5])
                 OxidizerPressure = float(filter_data[7])
-
                 CombustionPressure=float(filter_data[11])
 
                 ################################
                 ### Above pressurant pressure Limit
-
                 #Add Color Warnings
                 if (PressurantPressure >= 50.0): #100
                     DATALABEL3.config(bg='red')
@@ -311,7 +306,7 @@ def get_data():
                     DATALABEL5.config(fg='black')
 
                 ############# Place Data into their respective arrays
-                if(count>5): # Removes old data
+                if(count > 5): # Removes old data
                     mission_time.pop(0)
                     pressurant_temp.pop(0)
                     pressurant_pressure.pop(0)
@@ -343,6 +338,7 @@ def send():
     send_data = data_entry.get()
     if not send_data:
         print("Sent Nothing")
+
     serial_object.write(send_data)
     print(send_data)
 
