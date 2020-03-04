@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3296aa34-9375-45f8-b6ab-5c0c023aa747</ProjectGuid>
+    <ProjectGuid>e2552377-05df-4330-a8bb-d6507e9015d1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>gui.py</StartupFile>
+    <StartupFile>AriesGui.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>gui</Name>
-    <RootNamespace>gui</RootNamespace>
+    <Name>AriesGui</Name>
+    <RootNamespace>AriesGui</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="gui.py" />
+    <Compile Include="AriesGui.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -10,3 +10,7 @@
 *.user
 *.db-shm
 *.db-wal
+*.json
+/.vs
+/ProjectAries/.vs
+/ProjectAries/AriesGui/output.csv
